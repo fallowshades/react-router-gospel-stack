@@ -27,7 +27,7 @@ pnpm run test
 pnpm run test:dev
 
 # Run tests for a specific package
-pnpm run test --filter=@react-router-gospel-stack/web-utils
+pnpm run test --filter=@Hamoria/web-utils
 
 # Run tests with coverage
 pnpm run test -- --coverage
@@ -145,13 +145,13 @@ export default defineConfig({
 
 ```bash
 # Run E2E tests (webapp must be running)
-pnpm run test:e2e --filter=@react-router-gospel-stack/webapp
+pnpm run test:e2e --filter=@Hamoria/webapp
 
 # Run E2E tests in dev mode (starts dev server)
-pnpm run test:e2e:dev --filter=@react-router-gospel-stack/webapp
+pnpm run test:e2e:dev --filter=@Hamoria/webapp
 
 # Run E2E tests in headed mode (see browser)
-pnpm run test:e2e:dev --filter=@react-router-gospel-stack/webapp -- --headed
+pnpm run test:e2e:dev --filter=@Hamoria/webapp -- --headed
 
 # Run specific test file
 pnpm run test:e2e:dev --filter=webapp -- tests/e2e/app.spec.ts
@@ -283,7 +283,7 @@ The webapp includes test utilities in `tests/`:
 pnpm run lint
 
 # Lint specific package
-pnpm run lint --filter=@react-router-gospel-stack/webapp
+pnpm run lint --filter=@Hamoria/webapp
 
 # Auto-fix issues
 pnpm run lint -- --fix
@@ -295,7 +295,7 @@ ESLint configurations are in the `config/eslint` package:
 
 ```javascript
 // Base configuration
-import baseConfig from "@react-router-gospel-stack/eslint-config/base";
+import baseConfig from "@Hamoria/eslint-config/base";
 
 export default [
   ...baseConfig,
@@ -341,7 +341,7 @@ const result: any = processData(data);
 pnpm run typecheck
 
 # Type check specific package
-pnpm run typecheck --filter=@react-router-gospel-stack/webapp
+pnpm run typecheck --filter=@Hamoria/webapp
 
 # Watch mode (checks on file changes)
 pnpm run typecheck --filter=webapp -- --watch
@@ -353,7 +353,7 @@ TypeScript configs are in the `config/tsconfig` package:
 
 ```json
 {
-  "extends": "@react-router-gospel-stack/tsconfig/react.json",
+  "extends": "@Hamoria/tsconfig/react.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

@@ -1,5 +1,5 @@
 {
-  "name": "@react-router-gospel-stack/web-utils",
+  "name": "@Hamoria/web-utils",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -15,8 +15,8 @@
     "@tusbar/cache-control": "^1.0.2"
   },
   "devDependencies": {
-    "@react-router-gospel-stack/eslint-config": "workspace:*",
-    "@react-router-gospel-stack/tsconfig": "workspace:*",
+    "@Hamoria/eslint-config": "workspace:*",
+    "@Hamoria/tsconfig": "workspace:*",
     "rimraf": "catalog:",
     "typescript": "catalog:typescript",
     "vite": "^7.2.2",

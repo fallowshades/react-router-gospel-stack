@@ -12,7 +12,7 @@ This is the main React Router v7+ application that lives inside the monorepo.
 Start the React Router development server:
 
 ```sh
-pnpm run dev --filter=@react-router-gospel-stack/webapp
+pnpm run dev --filter=@Hamoria/webapp
 ```
 
 This starts your app in development mode with hot module replacement (HMR). Changes to your code will be reflected immediately in the browser.
@@ -81,22 +81,22 @@ All scripts should be run from the monorepo root with the `--filter` flag:
 
 ```sh
 # Development
-pnpm run dev --filter=@react-router-gospel-stack/webapp
+pnpm run dev --filter=@Hamoria/webapp
 
 # Build
-pnpm run build --filter=@react-router-gospel-stack/webapp
+pnpm run build --filter=@Hamoria/webapp
 
 # Type checking
-pnpm run typecheck --filter=@react-router-gospel-stack/webapp
+pnpm run typecheck --filter=@Hamoria/webapp
 
 # Linting
-pnpm run lint --filter=@react-router-gospel-stack/webapp
+pnpm run lint --filter=@Hamoria/webapp
 
 # Unit tests
-pnpm run test --filter=@react-router-gospel-stack/webapp
+pnpm run test --filter=@Hamoria/webapp
 
 # E2E tests
-pnpm run test:e2e:dev --filter=@react-router-gospel-stack/webapp
+pnpm run test:e2e:dev --filter=@Hamoria/webapp
 ```
 
 ## Adding Routes
@@ -117,7 +117,7 @@ Learn more: [React Router Routing Guide](https://reactrouter.com/start/framework
 Import the database client from the database package:
 
 ```typescript
-import { db } from "@react-router-gospel-stack/infrastructure";
+import { db } from "@Hamoria/infrastructure";
 
 export async function loader() {
   const users = await db.user.findMany();

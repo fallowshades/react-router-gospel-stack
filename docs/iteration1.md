@@ -1,3 +1,49 @@
+#
+
+##
+
+package.json
+
+```json
+
+  "scripts": {
+    "build": "turbo run build",
+    "db:generate": "turbo run db:generate --",
+    "db:seed": "turbo run db:seed --no-cache",
+    "db:migrate:new": "turbo run db:migrate:new --",
+    "db:migrate:apply": "turbo run db:migrate:apply --",
+    "db:migrate:apply:production": "turbo run db:migrate:apply:production --no-cache",
+    "dev": "turbo run dev --parallel",
+    "storybook": "turbo run storybook",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
+    "lint:fix": "turbo run lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "docker:db": "docker compose -f docker-compose.yml up -d",
+    "docker:build": "turbo run docker:build",
+    "docker:build:webapp": "docker build -t react-router-gospel-stack-webapp -f ./apps/webapp/other/Dockerfile .",
+    "docker:run:webapp": "docker run -it --init --rm -p 3000:3000 --env-file .env.docker --env DATABASE_URL='postgresql://postgres:postgres@db:5432/postgres' --network=app_network react-router-gospel-stack-webapp",
+    "test": "turbo run test",
+    "test:dev": "turbo run test:dev",
+    "start-webapp": "pnpm run --filter @Hamoria/webapp start",
+    "start": "turbo run start",
+    "clean": "turbo run clean",
+    "nuke": "turbo run nuke",
+    "clean:node_modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
+    "typecheck": "turbo run typecheck",
+    "test:e2e:dev": "turbo run test:e2e:dev",
+    "test:e2e:ci": "turbo run test:e2e:ci",
+    "setup": "node scripts/setup.mjs",
+    "validate": "turbo run lint typecheck test"
+  },
+```
+
+#### initialization docs
+
+scripts/setup.ts
+
+- tursoSqlLite + drizzle
+
+```ts
 #!/usr/bin/env node
 
 /**
@@ -32,7 +78,7 @@ async function main() {
   console.log(chalk.bold.cyan("\n🎉 React Router Gospel Stack Setup\n"));
 
   const appNameRegex = escapeRegExp("react-router-gospel-stack");
-  const orgNameRegex = escapeRegExp("@react-router-gospel-stack");
+  const orgNameRegex = escapeRegExp("@Hamoria");
 
   const DIR_NAME = path.basename(rootDirectory);
   const SUFFIX = getRandomString(2);
@@ -489,3 +535,39 @@ async function processFilesWithGlobs({
 
   await Promise.all(writePromises);
 }
+```
+
+- change org name
+
+turbo.json
+
+```json
+ "@Hamoria/webapp#start": {
+      "dependsOn": ["^build"],
+      "outputs": ["public/build/**"]
+    },
+```
+
+packages/.l/tsconfig.json
+
+```json
+ "extends": "@Hamoria/tsconfig/node22.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+    "paths": {
+      "@Hamoria/business/*": ["../../packages/business/src/*"]
+    }
+```
+
+components.json
+
+```json
+ "utils": "@Hamoria/ui/lib/utils",
+    "ui": "@Hamoria/ui/components"
+```
+
+tailwind.css
+
+```css
+@import "@Hamoria/ui/theme.css";
+```

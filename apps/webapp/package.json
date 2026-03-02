@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@react-router-gospel-stack/webapp",
+  "name": "@Hamoria/webapp",
   "version": "1.0.0",
   "sideEffects": false,
   "type": "module",
@@ -27,10 +27,10 @@
   },
   "dependencies": {
     "@epic-web/remember": "^1.1.0",
-    "@react-router-gospel-stack/business": "workspace:*",
-    "@react-router-gospel-stack/infrastructure": "workspace:*",
-    "@react-router-gospel-stack/web-utils": "workspace:*",
-    "@react-router-gospel-stack/ui": "workspace:*",
+    "@Hamoria/business": "workspace:*",
+    "@Hamoria/infrastructure": "workspace:*",
+    "@Hamoria/web-utils": "workspace:*",
+    "@Hamoria/ui": "workspace:*",
     "@react-router/node": "catalog:react-router",
     "@sentry/profiling-node": "catalog:sentry",
     "@sentry/react-router": "catalog:sentry",
@@ -52,7 +52,7 @@
   "devDependencies": {
     "@faker-js/faker": "^10.1.0",
     "@playwright/test": "^1.56.1",
-    "@react-router-gospel-stack/eslint-config": "workspace:*",
+    "@Hamoria/eslint-config": "workspace:*",
     "@react-router/dev": "catalog:react-router",
     "@sentry/vite-plugin": "catalog:sentry",
     "@tailwindcss/typography": "catalog:tailwindcss",

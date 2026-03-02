@@ -1,6 +1,6 @@
 import { count } from "drizzle-orm";
 
-import type { UserRepository } from "@react-router-gospel-stack/business/repositories";
+import type { UserRepository } from "@Hamoria/business/repositories";
 
 import { users, type DrizzleClient } from "../database/index.ts";
 

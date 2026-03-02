@@ -44,13 +44,13 @@ packages/ui/
 The webapp already has the UI package installed. For new apps:
 
 ```bash
-pnpm add @react-router-gospel-stack/ui --filter=@react-router-gospel-stack/your-app
+pnpm add @Hamoria/ui --filter=@Hamoria/your-app
 ```
 
 ### Importing Components
 
 ```typescript
-import { Button, Card, CardHeader, CardContent } from "@react-router-gospel-stack/ui";
+import { Button, Card, CardHeader, CardContent } from "@Hamoria/ui";
 
 export function MyComponent() {
   return (
@@ -154,7 +154,7 @@ If you prefer to add components manually:
 
 4. **Rebuild the package:**
    ```bash
-   pnpm run build --filter=@react-router-gospel-stack/ui
+   pnpm run build --filter=@Hamoria/ui
    ```
 
 ## Tailwind CSS Integration
@@ -168,13 +168,13 @@ The UI package exports a Tailwind preset that includes the theme configuration.
 ```typescript
 import type { Config } from "tailwindcss";
 
-import uiPreset from "@react-router-gospel-stack/ui/tailwind";
+import uiPreset from "@Hamoria/ui/tailwind";
 
 export default {
   content: [
     "./app/**/*.{ts,tsx}",
     // Include UI package components
-    "./node_modules/@react-router-gospel-stack/ui/dist/**/*.js",
+    "./node_modules/@Hamoria/ui/dist/**/*.js",
   ],
   presets: [uiPreset],
   theme: {
@@ -216,7 +216,7 @@ These CSS variables are used by the components for theming.
 The `cn` utility combines class names and handles Tailwind conflicts:
 
 ```typescript
-import { cn } from "@react-router-gospel-stack/ui";
+import { cn } from "@Hamoria/ui";
 
 // Merge classes with proper precedence
 const className = cn(
@@ -235,7 +235,7 @@ It uses [clsx](https://github.com/lukeed/clsx) and [tailwind-merge](https://gith
 The UI package includes a Vite dev server for developing components in isolation:
 
 ```bash
-pnpm run dev --filter=@react-router-gospel-stack/ui
+pnpm run dev --filter=@Hamoria/ui
 ```
 
 This starts a dev server at `http://localhost:5173` (or next available port) where you can preview components.
@@ -266,7 +266,7 @@ export function App() {
 ### Building the Package
 
 ```bash
-pnpm run build --filter=@react-router-gospel-stack/ui
+pnpm run build --filter=@Hamoria/ui
 ```
 
 This uses tsup to:
@@ -391,7 +391,7 @@ export const MyComponent: React.FC<MyComponentProps> = ({ ... }) => {
 This allows consumers to:
 
 ```typescript
-import type { MyComponentProps } from "@react-router-gospel-stack/ui";
+import type { MyComponentProps } from "@Hamoria/ui";
 
 // Use the type in their code
 const props: MyComponentProps = { ... };
@@ -510,7 +510,7 @@ If you want to publish the UI package to npm:
 2. **Build the package:**
 
    ```bash
-   pnpm run build --filter=@react-router-gospel-stack/ui
+   pnpm run build --filter=@Hamoria/ui
    ```
 
 3. **Publish:**
@@ -560,10 +560,10 @@ If you see type errors:
 
 ```bash
 # Rebuild the UI package
-pnpm run build --filter=@react-router-gospel-stack/ui
+pnpm run build --filter=@Hamoria/ui
 
 # Rebuild consuming apps
-pnpm run build --filter=@react-router-gospel-stack/webapp...
+pnpm run build --filter=@Hamoria/webapp...
 ```
 
 ### Components Not Found

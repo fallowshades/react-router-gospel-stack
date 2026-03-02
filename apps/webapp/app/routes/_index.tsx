@@ -6,13 +6,13 @@ import {
 } from "react-router";
 import { ExternalLinkIcon } from "lucide-react";
 
-import { Badge } from "@react-router-gospel-stack/ui/components/badge";
-import { Button } from "@react-router-gospel-stack/ui/components/button";
+import { Badge } from "@Hamoria/ui/components/badge";
+import { Button } from "@Hamoria/ui/components/button";
 import {
   CardContent,
   CardDescription,
   CardTitle,
-} from "@react-router-gospel-stack/ui/components/card";
+} from "@Hamoria/ui/components/card";
 import {
   Table,
   TableBody,
@@ -21,7 +21,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@react-router-gospel-stack/ui/components/table";
+} from "@Hamoria/ui/components/table";
 
 import type { Route } from "./+types/_index";
 
@@ -600,7 +600,7 @@ cd my-app`,
     title: "Start the development server",
     description:
       "Start your the developpement server of the webapp and begin developing your application.",
-    command: "pnpm dev --filter=@react-router-gospel-stack/webapp",
+    command: "pnpm dev --filter=@Hamoria/webapp",
     cta: {
       label: "Read the development guide",
       href: "https://github.com/PhilDL/react-router-gospel-stack/blob/main/docs/development.md",

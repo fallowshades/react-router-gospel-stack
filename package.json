@@ -1,5 +1,5 @@
 {
-  "name": "@react-router-gospel-stack/root",
+  "name": "@Hamoria/root",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -23,7 +23,7 @@
     "docker:run:webapp": "docker run -it --init --rm -p 3000:3000 --env-file .env.docker --env DATABASE_URL='postgresql://postgres:postgres@db:5432/postgres' --network=app_network react-router-gospel-stack-webapp",
     "test": "turbo run test",
     "test:dev": "turbo run test:dev",
-    "start-webapp": "pnpm run --filter @react-router-gospel-stack/webapp start",
+    "start-webapp": "pnpm run --filter @Hamoria/webapp start",
     "start": "turbo run start",
     "clean": "turbo run clean",
     "nuke": "turbo run nuke",

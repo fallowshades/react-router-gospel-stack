@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@import "@react-router-gospel-stack/ui/theme.css";
+@import "@Hamoria/ui/theme.css";
 @source "../../../../packages/ui/src";
 
 @layer base {

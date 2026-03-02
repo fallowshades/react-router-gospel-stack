@@ -1,9 +1,9 @@
 {
-  "extends": "@react-router-gospel-stack/tsconfig/node22.json",
+  "extends": "@Hamoria/tsconfig/node22.json",
   "compilerOptions": {
     "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
     "paths": {
-      "@react-router-gospel-stack/business/*": ["../../packages/business/src/*"]
+      "@Hamoria/business/*": ["../../packages/business/src/*"]
     }
   },
   "include": [

@@ -73,10 +73,10 @@ apps/webapp/
 
 **Dependencies:**
 
-- `@react-router-gospel-stack/infrastructure` - Database access
-- `@react-router-gospel-stack/business` - Business logic
-- `@react-router-gospel-stack/ui` - UI components
-- `@react-router-gospel-stack/web-utils` - Internal utilities
+- `@Hamoria/infrastructure` - Database access
+- `@Hamoria/business` - Business logic
+- `@Hamoria/ui` - UI components
+- `@Hamoria/web-utils` - Internal utilities
 
 ## Packages (`packages/`)
 
@@ -112,7 +112,7 @@ packages/infrastructure/
 **Usage:**
 
 ```typescript
-import { db } from "@react-router-gospel-stack/infrastructure";
+import { db } from "@Hamoria/infrastructure";
 
 // Usage depends on your ORM choice
 ```
@@ -248,7 +248,7 @@ packages/ui/
 **Usage:**
 
 ```typescript
-import { Button, Card } from "@react-router-gospel-stack/ui";
+import { Button, Card } from "@Hamoria/ui";
 
 export function MyComponent() {
   return (
@@ -277,7 +277,7 @@ Shared ESLint configurations and custom rules.
 
 ```javascript
 // eslint.config.js
-import baseConfig from "@react-router-gospel-stack/eslint-config/base";
+import baseConfig from "@Hamoria/eslint-config/base";
 
 export default [
   ...baseConfig,
@@ -299,7 +299,7 @@ Shared TypeScript configurations.
 
 ```json
 {
-  "extends": "@react-router-gospel-stack/tsconfig/react.json",
+  "extends": "@Hamoria/tsconfig/react.json",
   "compilerOptions": {
     // Your overrides
   }
@@ -381,10 +381,10 @@ pnpm run lint
 pnpm run test
 
 # Run for specific package
-pnpm run build --filter=@react-router-gospel-stack/ui
+pnpm run build --filter=@Hamoria/ui
 
 # Run for package and dependencies
-pnpm run build --filter=@react-router-gospel-stack/webapp...
+pnpm run build --filter=@Hamoria/webapp...
 ```
 
 ### Cache Benefits
@@ -414,10 +414,8 @@ The monorepo uses TypeScript path aliases for imports.
 {
   "compilerOptions": {
     "paths": {
-      "@react-router-gospel-stack/infrastructure": [
-        "../../packages/infrastructure/src"
-      ],
-      "@react-router-gospel-stack/ui": ["../../packages/ui/src"]
+      "@Hamoria/infrastructure": ["../../packages/infrastructure/src"],
+      "@Hamoria/ui": ["../../packages/ui/src"]
     }
   }
 }
@@ -426,7 +424,7 @@ The monorepo uses TypeScript path aliases for imports.
 This allows importing from source during development:
 
 ```typescript
-import { db } from "@react-router-gospel-stack/infrastructure";
+import { db } from "@Hamoria/infrastructure";
 ```
 
 React Router's build step compiles these imports.
@@ -439,7 +437,7 @@ React Router's build step compiles these imports.
 2. Update `package.json`:
    ```json
    {
-     "name": "@react-router-gospel-stack/my-package",
+     "name": "@Hamoria/my-package",
      "main": "./dist/index.js",
      "types": "./dist/index.d.ts",
      "scripts": {
@@ -469,7 +467,7 @@ React Router's build step compiles these imports.
 2. Update `package.json`:
    ```json
    {
-     "name": "@react-router-gospel-stack/my-internal",
+     "name": "@Hamoria/my-internal",
      "main": "./src/index.ts",
      "types": "./src/index.ts"
    }
@@ -479,7 +477,7 @@ React Router's build step compiles these imports.
 ### Using the Turbo Generator
 
 ```bash
-turbo gen workspace --name @react-router-gospel-stack/my-package --type package --copy
+turbo gen workspace --name @Hamoria/my-package --type package --copy
 ```
 
 Follow the prompts to scaffold a new package.
@@ -618,7 +616,7 @@ If TypeScript can't find types:
 pnpm run db:generate
 
 # Build packages
-pnpm run build --filter=@react-router-gospel-stack/infrastructure
+pnpm run build --filter=@Hamoria/infrastructure
 ```
 
 ### Cache Issues

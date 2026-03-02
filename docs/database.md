@@ -52,7 +52,7 @@ No code generation needed - edit the schema and immediately use it.
 ```typescript
 import { eq } from "drizzle-orm";
 
-import { users } from "@react-router-gospel-stack/infrastructure";
+import { users } from "@Hamoria/infrastructure";
 
 import { db } from "~/db.server";
 
@@ -118,7 +118,7 @@ This works with both local and remote Turso databases, as well as PostgreSQL.
 View and edit your database with Drizzle Studio:
 
 ```bash
-pnpm --filter @react-router-gospel-stack/infrastructure db:studio
+pnpm --filter @Hamoria/infrastructure db:studio
 ```
 
 Opens at `https://local.drizzle.studio`
@@ -201,7 +201,7 @@ turso db shell <database-name> < packages/infrastructure/prisma/migrations/<fold
 ### Prisma Studio
 
 ```bash
-pnpm --filter @react-router-gospel-stack/infrastructure prisma:studio
+pnpm --filter @Hamoria/infrastructure prisma:studio
 ```
 
 ## Turso Setup
@@ -344,7 +344,7 @@ packages/infrastructure/
 The seed script adapts to your chosen ORM:
 
 ```bash
-pnpm --filter @react-router-gospel-stack/infrastructure db:seed
+pnpm --filter @Hamoria/infrastructure db:seed
 ```
 
 Edit `packages/infrastructure/src/database/seed.ts` to customize seed data.
@@ -356,13 +356,13 @@ Edit `packages/infrastructure/src/database/seed.ts` to customize seed data.
 **Drizzle:**
 
 ```bash
-pnpm --filter @react-router-gospel-stack/infrastructure db:studio
+pnpm --filter @Hamoria/infrastructure db:studio
 ```
 
 **Prisma:**
 
 ```bash
-pnpm --filter @react-router-gospel-stack/infrastructure prisma:studio
+pnpm --filter @Hamoria/infrastructure prisma:studio
 ```
 
 ### Reset Database

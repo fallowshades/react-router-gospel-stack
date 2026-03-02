@@ -14,8 +14,8 @@
     "components": "~/components",
     "hooks": "~/hooks",
     "lib": "~/lib",
-    "utils": "@react-router-gospel-stack/ui/lib/utils",
-    "ui": "@react-router-gospel-stack/ui/components"
+    "utils": "@Hamoria/ui/lib/utils",
+    "ui": "@Hamoria/ui/components"
   },
   "registries": {
     "@svgl": "https://svgl.app/r/{name}.json"

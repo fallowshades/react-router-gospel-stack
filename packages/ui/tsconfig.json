@@ -1,5 +1,5 @@
 {
-  "extends": "@react-router-gospel-stack/tsconfig/react.json",
+  "extends": "@Hamoria/tsconfig/react.json",
   "compilerOptions": {
     "module": "ESNext",
     /* Bundler mode */
@@ -9,7 +9,7 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"],
-      "@react-router-gospel-stack/ui/*": ["./src/*"]
+      "@Hamoria/ui/*": ["./src/*"]
     }
   },
   "include": [

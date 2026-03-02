@@ -195,7 +195,7 @@ If you prefer to set up manually:
 
    ```bash
    find . -type f \( -name "*.json" -o -name "*.ts" -o -name "*.tsx" \) \
-     -exec sed -i '' 's/@react-router-gospel-stack/@your-org/g' {} +
+     -exec sed -i '' 's/@Hamoria/@your-org/g' {} +
    ```
 
 2. **Replace app name:**
@@ -285,7 +285,7 @@ You can skip initialization and use the default names:
 ```bash
 pnpm install
 pnpm run build
-pnpm run dev --filter=@react-router-gospel-stack/webapp
+pnpm run dev --filter=@Hamoria/webapp
 ```
 
 ### Changes from Previous Versions

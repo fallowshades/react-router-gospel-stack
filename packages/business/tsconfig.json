@@ -1,5 +1,5 @@
 {
-  "extends": "@react-router-gospel-stack/tsconfig/node22.json",
+  "extends": "@Hamoria/tsconfig/node22.json",
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "tsup.config.ts"],
   "compilerOptions": {
     "paths": {},

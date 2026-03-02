@@ -150,7 +150,7 @@ Quick reference:
 Run the first build with dependencies:
 
 ```bash
-pnpm run build --filter=@react-router-gospel-stack/webapp...
+pnpm run build --filter=@Hamoria/webapp...
 ```
 
 The `...` suffix tells Turborepo to also build all dependencies of the webapp.
@@ -162,7 +162,7 @@ The `...` suffix tells Turborepo to also build all dependencies of the webapp.
 Start the React Router dev server:
 
 ```bash
-pnpm run dev --filter=@react-router-gospel-stack/webapp
+pnpm run dev --filter=@Hamoria/webapp
 ```
 
 Your app should now be running at `http://localhost:5173` (or another port if 5173 is taken).
@@ -173,10 +173,10 @@ Your app should now be running at `http://localhost:5173` (or another port if 51
 
 ```bash
 # Run only the webapp
-pnpm run dev --filter=@react-router-gospel-stack/webapp
+pnpm run dev --filter=@Hamoria/webapp
 
 # Run with dependencies in watch mode (recommended for package development)
-pnpm run dev --filter=@react-router-gospel-stack/webapp...
+pnpm run dev --filter=@Hamoria/webapp...
 ```
 
 ### Building Packages
@@ -186,10 +186,10 @@ pnpm run dev --filter=@react-router-gospel-stack/webapp...
 pnpm run build
 
 # Build specific package
-pnpm run build --filter=@react-router-gospel-stack/ui
+pnpm run build --filter=@Hamoria/ui
 
 # Build package and its dependencies
-pnpm run build --filter=@react-router-gospel-stack/webapp...
+pnpm run build --filter=@Hamoria/webapp...
 ```
 
 ### Installing Packages
@@ -198,10 +198,10 @@ To install an npm package in a specific workspace:
 
 ```bash
 # Install in the webapp
-pnpm add dayjs --filter @react-router-gospel-stack/webapp
+pnpm add dayjs --filter @Hamoria/webapp
 
 # Install in the ui package
-pnpm add lucide-react --filter @react-router-gospel-stack/ui
+pnpm add lucide-react --filter @Hamoria/ui
 
 # Install in workspace root
 pnpm add -w <package-name>
@@ -212,7 +212,7 @@ pnpm add -w <package-name>
 #### Internal Package (no build step)
 
 ```bash
-turbo gen workspace --name @react-router-gospel-stack/foobarbaz --type package --copy
+turbo gen workspace --name @Hamoria/foobarbaz --type package --copy
 ```
 
 Then follow the prompts. See the `web-utils` package as an example.
@@ -260,10 +260,10 @@ View your database:
 
 ```bash
 # Drizzle
-pnpm --filter @react-router-gospel-stack/infrastructure db:studio
+pnpm --filter @Hamoria/infrastructure db:studio
 
 # Prisma
-pnpm --filter @react-router-gospel-stack/infrastructure prisma:studio
+pnpm --filter @Hamoria/infrastructure prisma:studio
 ```
 
 Switch ORM or database:
@@ -301,7 +301,7 @@ Apps and packages extend these configs in their `tsconfig.json`:
 
 ```json
 {
-  "extends": "@react-router-gospel-stack/tsconfig/react.json",
+  "extends": "@Hamoria/tsconfig/react.json",
   "compilerOptions": {
     // ... specific overrides
   }
@@ -319,7 +319,7 @@ ESLint configurations are in the `config/eslint` package:
 Apps and packages extend these configs in their `eslint.config.js`:
 
 ```js
-import baseConfig from "@react-router-gospel-stack/eslint-config/base";
+import baseConfig from "@Hamoria/eslint-config/base";
 
 export default [
   ...baseConfig,
@@ -344,7 +344,7 @@ React Router's dev server supports HMR. Changes to your code will be reflected i
 The monorepo uses TypeScript path mappings for internal packages. This allows you to import from packages without building them first during development:
 
 ```typescript
-import { db } from "@react-router-gospel-stack/infrastructure";
+import { db } from "@Hamoria/infrastructure";
 ```
 
 React Router's build step handles compiling these dependencies.
@@ -364,7 +364,7 @@ If you see build errors after installing a package, try:
 
 ```bash
 pnpm run generate
-pnpm run build --filter=@react-router-gospel-stack/webapp...
+pnpm run build --filter=@Hamoria/webapp...
 ```
 
 #### Port Already in Use

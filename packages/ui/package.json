@@ -1,5 +1,5 @@
 {
-  "name": "@react-router-gospel-stack/ui",
+  "name": "@Hamoria/ui",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -35,8 +35,8 @@
     "tw-animate-css": "catalog:tailwindcss"
   },
   "devDependencies": {
-    "@react-router-gospel-stack/eslint-config": "workspace:*",
-    "@react-router-gospel-stack/tsconfig": "workspace:*",
+    "@Hamoria/eslint-config": "workspace:*",
+    "@Hamoria/tsconfig": "workspace:*",
     "@react-router/dev": "catalog:react-router",
     "@react-router/node": "catalog:react-router",
     "@storybook/addon-docs": "catalog:storybook",

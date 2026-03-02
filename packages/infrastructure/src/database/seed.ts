@@ -34,4 +34,3 @@ seed()
   .finally(() => {
     process.exit(0);
   });
-

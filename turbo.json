@@ -36,7 +36,7 @@
         ".cache"
       ]
     },
-    "@react-router-gospel-stack/webapp#start": {
+    "@Hamoria/webapp#start": {
       "dependsOn": ["^build"],
       "outputs": ["public/build/**"]
     },

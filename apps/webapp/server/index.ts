@@ -7,8 +7,8 @@ import { requestId } from "hono/request-id";
 import { trimTrailingSlash } from "hono/trailing-slash";
 import { createHonoServer } from "react-router-hono-server/node";
 
-import type { UserRepository } from "@react-router-gospel-stack/business/repositories";
-import { resolveRepositories } from "@react-router-gospel-stack/infrastructure/repositories";
+import type { UserRepository } from "@Hamoria/business/repositories";
+import { resolveRepositories } from "@Hamoria/infrastructure/repositories";
 
 import { db } from "~/db.server.ts";
 import { sessionStorage } from "~/session.server.ts";

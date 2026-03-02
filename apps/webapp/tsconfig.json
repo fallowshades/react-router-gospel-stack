@@ -25,24 +25,24 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./app/*"],
-      "@react-router-gospel-stack/ui/*": ["../../packages/ui/src/*"],
-      "@react-router-gospel-stack/ui": ["../../packages/ui/src/index"],
-      "@react-router-gospel-stack/business/*": [
+      "@Hamoria/ui/*": ["../../packages/ui/src/*"],
+      "@Hamoria/ui": ["../../packages/ui/src/index"],
+      "@Hamoria/business/*": [
         "../../packages/business/src/*"
       ],
-      "@react-router-gospel-stack/business": [
+      "@Hamoria/business": [
         "../../packages/business/src/index"
       ],
-      "@react-router-gospel-stack/infrastructure/*": [
+      "@Hamoria/infrastructure/*": [
         "../../packages/infrastructure/src/*"
       ],
-      "@react-router-gospel-stack/infrastructure": [
+      "@Hamoria/infrastructure": [
         "../../packages/infrastructure/src/index"
       ],
-      "@react-router-gospel-stack/web-utils": [
+      "@Hamoria/web-utils": [
         "../../packages/web-utils/src/index"
       ],
-      "@react-router-gospel-stack/web-utils/*": [
+      "@Hamoria/web-utils/*": [
         "../../packages/web-utils/src/*"
       ]
     },

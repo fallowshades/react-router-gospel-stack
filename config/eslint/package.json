@@ -1,5 +1,5 @@
 {
-  "name": "@react-router-gospel-stack/eslint-config",
+  "name": "@Hamoria/eslint-config",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^16.0.1",
-    "@react-router-gospel-stack/tsconfig": "workspace:*",
+    "@Hamoria/tsconfig": "workspace:*",
     "eslint": "9.39.2",
     "typescript": "^5.9.3"
   }
